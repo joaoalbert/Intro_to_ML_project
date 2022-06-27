@@ -1,0 +1,39 @@
+Desrição do Projeto da Disciplina Introudção ao Aprendizado de Máquina
+
+Alunos:
+Carlos Henrique do Nascimento Otobone / 9009732
+João Alberto de Moraes Barretos / 10300316
+
+
+|========================================Introdução========================================|
+
+	O nosso projeto irá utilizar dados disponibilizados publicamente no site Kaggle. Iremos considerar informações de pacientes para identificar ocorrência de Hepatite C e Cirrose, de acordo com os respectivos datasets:
+	
+https://www.kaggle.com/datasets/fedesoriano/hepatitis-c-dataset
+https://www.kaggle.com/datasets/fedesoriano/cirrhosis-prediction-dataset
+
+sendo o primeiro mais geral, incluindo dados de doadores de sangue aleatórios, e o segundo mais específico, o qual contém apenas dados de pessoas com cirrose, classificando-as de acordo com o grauda doença (problema multiclasses). Também iremos analisar a possibilidade de observar a correlação entre ambas as doenças para verificar as chances de um paciente que teve hepatite vir a desenvolver cirrose, utilizando para isso dados de exames médicos dos pacientes.
+
+
+|=======================================Planejamento=======================================|
+
+1) Política de Utilização de Dados
+
+	Como os conjuntos possuem, respectivamente, 615 e 418, pretendemos variar o conjunto de testes para verificar como o aprendizado é influênciado pelo tamanho do conjunto de dados. A princípio, se o modelo obtido estiver convergindo para uma boa resposta, esperamos que ele estabilize e não apresente grandes variações ao aumentar o número de dados de treinamento. 
+	
+2) Critério de Avaliação de Desempenho
+
+	Como trata-se de um problema de classificação, iremos utilizar a função de perda da regressão logística, que nos retorna o erro in-sample, e também iremos aplicar o método de validação cruzada por "k-fold", variando o valor de k para analisar como os resultados e o erro de validação (estimador do erro de generalização) variam de acordo com o conjunto de dados de treinamento.
+	
+3) Solução Baseline
+
+	Os conjuntos de dados já vêm classificados então temos a solução de todos os pontos de dados do problema.
+	
+4) Exploração
+
+	Pretendemos analisar quais os parâmetros mais importantes na previsão do diagnóstico de um paciente. Para isso, iremos comparar um algoritmo simples de regressão com algoritmos de "weight elimination". A depender dos resultados obtidos, podemos também aplicar regularização ao algoritmo para evitar overfitting pela minimização excessiva do erro in-sample.
+	
+
+|===================================Considerações Finais===================================|
+
+	De modo geral, em Machine Learning, e mais amplamente em análise de dados, o planejamento de um projeto é importante para definir seus objetivos e a direção para qual o mesmo deve caminhar. Todavia, é muito importante ter em mente que muito do que se decide depende dos resultados obtidos, e o próprio projeto toma forma à medida em que o mesmo se desenvolve.  
